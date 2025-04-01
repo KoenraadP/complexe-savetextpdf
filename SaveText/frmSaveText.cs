@@ -97,5 +97,15 @@ namespace SaveText
             // de extensie (.txt)
             txtTitle.Text = Path.GetFileNameWithoutExtension(ofd.FileName);
         }
+
+        private void btnSavePDF_Click(object sender, EventArgs e)
+        {
+            // data uit mijn textboxes opslaan in variabelen
+            string title = txtTitle.Text;
+            string story = txtStory.Text;
+
+            // TextBll SavePDF methode uitvoeren
+            TextBll.SavePDF(Directory, title, story);
+        }
     }
 }

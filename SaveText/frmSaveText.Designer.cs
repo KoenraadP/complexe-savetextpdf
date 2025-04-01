@@ -33,6 +33,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
+            this.btnSavePDF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtTitle
@@ -77,11 +78,22 @@
             this.ofd.InitialDirectory = "C:\\stories\\";
             this.ofd.FileOk += new System.ComponentModel.CancelEventHandler(this.Ofd_FileOk);
             // 
+            // btnSavePDF
+            // 
+            this.btnSavePDF.Location = new System.Drawing.Point(13, 268);
+            this.btnSavePDF.Name = "btnSavePDF";
+            this.btnSavePDF.Size = new System.Drawing.Size(266, 23);
+            this.btnSavePDF.TabIndex = 4;
+            this.btnSavePDF.Text = "Save as PDF";
+            this.btnSavePDF.UseVisualStyleBackColor = true;
+            this.btnSavePDF.Click += new System.EventHandler(this.btnSavePDF_Click);
+            // 
             // frmSaveText
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 271);
+            this.ClientSize = new System.Drawing.Size(298, 299);
+            this.Controls.Add(this.btnSavePDF);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtStory);
@@ -100,6 +112,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.OpenFileDialog ofd;
+        private System.Windows.Forms.Button btnSavePDF;
     }
 }
 
